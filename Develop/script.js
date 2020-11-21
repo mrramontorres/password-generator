@@ -63,11 +63,17 @@ function generatePassword() {
   }
 
   //Combine selected character types into one string.
-  var Str = "";
-  var newStr = Str.concat(lower, upper, numeric, special);
+  var newStr = "";
+  var comboStr = newStr.concat(lower, upper, numeric, special);
 
-  return length;
-  
+  //Generate random string of 'length' length using newStr.
+  var password = "";
+  var comboStrLength = comboStr.length;
+  for ( var i = 0; i < length; i++ ) {
+    password += comboStr.charAt(Math.floor(Math.random() * comboStrLength)); 
+  }
+
+  return password;
 }
 
 // Write password to the #password input.
