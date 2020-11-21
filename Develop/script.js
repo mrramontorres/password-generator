@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 var lowerStr = "abcdefghijklmnopqurstuvwxyz";
 var upperStr = "ABCDEFGHIJKLMNOPQURSTUVWXYZ";
 var numericStr = "0123456789";
-var specialStr = "!@#$%^&*";
+var specialStr = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
 function generatePassword() {
   //User selects password length.
@@ -37,35 +37,34 @@ function generatePassword() {
     var special = confirm("Click OK if you your password to include special characters.");
   }
 
-  //Convert the selected variables to a string.
+  //Convert selected variables that are true to a string else.
   if (lower === true) {
     var lower = lowerStr;
-  } else {
+    } else {
     var lower = "";
-    } 
+  } 
 
   if (upper === true) {
-    var lower = upperStr;
-  } else {
+    var upper = upperStr;
+    } else {
     var upper = "";
   }
 
   if (numeric === true) {
-    var lower = numericStr;
-  } else {
+    var numeric = numericStr;
+    } else {
     var numeric = "";
   }
 
   if (special === true) {
-    var lower = specialStr;
-  } else {
+    var special = specialStr;
+    } else {
     var special = "";
   }
 
-  console.log("This is what lower is: " + lower);
-  console.log("This is what upper is: " + upper);
-  console.log("This is what numeric is: " + numeric);
-  console.log("This is what special is: " + special);
+  //Combine selected character types into one string.
+  var Str = "";
+  var newStr = Str.concat(lower, upper, numeric, special);
 
   return length;
   
