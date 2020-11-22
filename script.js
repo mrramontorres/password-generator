@@ -19,31 +19,63 @@ function generatePassword() {
   // User selects which character types to include and selection in the affirmative are validated.
   var lower = confirm("Click OK to include lowercase characters in your password.");
   if (lower === true) {
-    alert("You password will include lowercase characters.");
-  }
+    alert("You password WILL include lowercase characters.");
+    } else {
+    alert("NO lowercase characters will be included.");
+  } 
   
   var upper = confirm("Click OK to include uppercase characters in your password.");
   if (upper === true) {
-    alert("You password will include uppercase characters.");
-  }
+    alert("You password WILL include uppercase characters.");
+    } else {
+    alert("NO uppercase characters will be included.");
+  } 
   
   var numeric = confirm("Click OK to include numerical characters in your password.");
   if (numeric === true) {
-    alert("You password will include numerical characters.");
-  }
+    alert("You password WILL include numerical characters.");
+    } else {
+    alert("NO numerical characters will be included.");
+  } 
   
   var special = confirm("Click OK to include special characters, (! # $ % & ( ) * + : ; < > ? @ ^ _ { } ~), in your password.");
   if (special === true) {
-    alert("You password will include special characters.");
-  }
+    alert("You password WILL include special characters.");
+    } else {
+    alert("NO special characters will be included.");
+  } 
 
   // Check that user chooses at least one of the following types of characters to include in generated password.
   while (lower === false && upper === false && numeric === false &&  special === false) {
     alert("You must choose at least 1 out of the 4 character types in order to generate a password.");
+
     var lower = confirm("Click OK if you want your password to include lowercase characters?");
-    var upper = confirm("Click OK if you your password to include uppercase characters.");
-    var numeric = confirm("Click OK if you your password to include numerical characters.");
-    var special = confirm("Click OK if you your password to include special characters.");
+    if (lower === true) {
+      alert("You password WILL include lowercase characters.");
+      } else {
+      alert("NO lowercase characters will be included.");
+    } 
+
+    var upper = confirm("Click OK to include uppercase characters in your password.");
+    if (upper === true) {
+      alert("You password WILL include uppercase characters.");
+      } else {
+      alert("NO uppercase characters will be included.");
+    } 
+
+    var numeric = confirm("Click OK to include numerical characters in your password.");
+    if (numeric === true) {
+      alert("You password WILL include numerical characters.");
+      } else {
+      alert("NO numerical characters will be included.");
+    }
+
+    var special = confirm("Click OK to include special characters, (! # $ % & ( ) * + : ; < > ? @ ^ _ { } ~), in your password.");
+      if (special === true) {
+        alert("You password WILL include special characters.");
+        } else {
+        alert("NO special characters will be included.");
+    } 
   }
 
   // Convert the selected character types chosen by user into to strings.
