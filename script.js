@@ -16,7 +16,7 @@ function generatePassword() {
     var length = prompt("Uh oh! You did not choose an integer or appropriate password length. Please choose a whole number between 8 and 128.");
   }
 
-  // User selects which character types to include and selection in the affirmative are validated.
+  // User selects which character types to include and selections are validated.
   var lower = confirm("Click OK to include lowercase characters in your password.");
   if (lower === true) {
     alert("You password WILL include lowercase characters.");
